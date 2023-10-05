@@ -1,4 +1,4 @@
-export const CarsView = `
+ const CarsView = `
 <div class="container-fluid">
 
       <section class="row">

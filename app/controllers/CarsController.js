@@ -1,4 +1,4 @@
-import { AppState } from "../AppState.js";
+import { AppState } from "../AppState";
 import { carsService } from "../services/CarsService.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
@@ -7,8 +7,8 @@ import { setHTML } from "../utils/Writer.js";
 function _drawCars() {
   const cars = AppState.cars
   let content = ''
-  cars.forEach(car => content += car.CarCard)
-  setHTML('cars', content)
+  cars.forEach(car => content += cars.CarCard)
+  setHTML('cars', cars)
 }
 
 export class CarsController {
@@ -16,13 +16,11 @@ export class CarsController {
     console.log('Cars Controller is loaded', AppState.cars);
     _drawCars()
 
-    AppState.on('cars', _drawCars)
+    AppState.on('Cars', _drawCars)
   }
 
   createCar(event) {
     try {
-      event.preventDefault()
-
       const form = event.target
 
       // if (money < 100) {
@@ -65,6 +63,6 @@ export class CarsController {
     }
 
     console.log('They want to delete!');
-    carsService.removeCar(carId)
+    carsService.removeCar()
   }
 }

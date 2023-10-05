@@ -1,31 +1,23 @@
-gregslist
-============
+### Errors
 
-### Get Started
+Car model takes in many parameters instead of a data object
 
-```terminal
-> npm i
-> npm run sass
-> npm run serve
-```
+Car CarCard is missing an ending div
 
-### AuthConfig
+CarsController is missing .js at the end of the AppState import
 
-Fill in your AuthConfig with keys from [Auth0](https://auth0.com/)
+Create Car does not have a preventDefault
 
-```javascript
-export const domain = '' 
-export const clientId = '' 
-export const audience = '' 
-```
-## Legal Overview
+Remove Car does not pass carId down to service
 
-The content under the CodeWorks®, LLC Organization and all of the individual repos are solely intended for use by CodeWorks Instruction to deliver Educational content to CodeWorks Students.
+Draw Cars uses cars.carCard
 
----
+Draw Cars sets cars into the html
 
-## Copyright
+Router CarView is not defined or exported
 
-© CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
+No MDI icons link
 
-<img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">
+No Emit for cars after new car
+
+Bad listener

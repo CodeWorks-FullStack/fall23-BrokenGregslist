@@ -1,22 +1,19 @@
 import { generateId } from "../utils/GenerateId.js"
 
 export class Car {
-  /**
-   * @param {{ year: number; make: string; model: string; mileage: number; runs: boolean; imgUrl: string; isNew: boolean; price: number; color: string; description: string; listedAt?: Date }} data
-   */
-  constructor (data) {
+  constructor (year, make, model, mileage, runs, imgUrl, isNew, price, color, description, listedAt) {
     this.id = generateId()
-    this.make = data.make
-    this.model = data.model
-    this.year = data.year
-    this.mileage = data.mileage
-    this.runs = data.runs
-    this.imgUrl = data.imgUrl
-    this.isNew = data.isNew
-    this.price = data.price
-    this.color = data.color
-    this.description = data.description
-    this.listedAt = data.listedAt ? new Date(data.listedAt).toLocaleString() : new Date().toLocaleString()
+    this.make = make
+    this.model = model
+    this.year = year
+    this.mileage = mileage
+    this.runs = runs
+    this.imgUrl = imgUrl
+    this.isNew = isNew
+    this.price = price
+    this.color = color
+    this.description = description
+    this.listedAt = listedAt ? new Date(listedAt).toLocaleString() : new Date().toLocaleString()
   }
 
   get CarCard() {
@@ -38,7 +35,6 @@ export class Car {
           </div>
         </div>
       </div>
-    </div>
     `
   }
 

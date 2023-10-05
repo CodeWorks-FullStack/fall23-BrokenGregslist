@@ -13,8 +13,6 @@ class CarsService {
     console.log('new car!', newCar);
     AppState.cars.push(newCar)
     _saveCars()
-    // AppState.cars = AppState.cars
-    AppState.emit('cars')
   }
   removeCar(carId) {
     const cars = AppState.cars
